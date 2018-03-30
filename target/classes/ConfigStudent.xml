@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="student" class="com.caps.demo.spring.xml.Student">
+		<property name="name" value="Ryder"/>
+		<property name="sub" ref="maths" />
+	</bean>
+	
+	<bean id="student2" class="com.caps.demo.spring.xml.Student">
+		<constructor-arg value="Blake"/>
+		<constructor-arg ref="phy"/>
+	</bean>
+	
+	<bean id="phy" class="com.caps.demo.spring.xml.Physics"/>
+	
+	<bean id="maths" class="com.caps.demo.spring.xml.Math"/>
+</beans>
