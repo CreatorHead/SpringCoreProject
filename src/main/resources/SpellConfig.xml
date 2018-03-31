@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="showBean" class="com.caps.demo.spring.spell.ShowData">
+		<!-- <property name="data" value="#{beanData.showSometing()?.toUpperCase()}"/> -->
+		<!-- <property name="data" value="#{T(com.caps.demo.spring.spell.Data).G}"></property> -->
+		<property name="data" value="#{'What the fuck'[3]}"/>
+	</bean>
+	
+	<bean id="beanData" class="com.caps.demo.spring.spell.Data">
+		<property name="data" value="Talk is cheap, Show me the code"></property>
+	</bean>
+</beans>
